@@ -33,10 +33,11 @@ The package is documentation-first. It does not deploy or configure Agent Builde
 ## Recommended Build Order
 
 1. Read [docs/workflow-map.md](C:\CODEX\docs\workflow-map.md).
-2. Create nodes in Agent Builder using [docs/agent-builder-setup.md](C:\CODEX\docs\agent-builder-setup.md).
-3. Paste prompts from `prompts/`.
-4. Upload relevant files from `knowledge/` into Builder.
-5. Run Preview scenarios from [tests/preview-cases.md](C:\CODEX\tests\preview-cases.md).
+2. Execute the operational sequence in [docs/launch-checklist.md](C:\CODEX\docs\launch-checklist.md).
+3. Create nodes in Agent Builder using [docs/agent-builder-setup.md](C:\CODEX\docs\agent-builder-setup.md).
+4. Paste prompts from `prompts/`.
+5. Upload relevant files from `knowledge/` into Builder.
+6. Run Preview scenarios from [tests/preview-cases.md](C:\CODEX\tests\preview-cases.md).
 
 ## Default Assumptions
 
