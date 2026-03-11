@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Verse Worker Output",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "primary_output",
+    "notes",
+    "issues_found",
+    "recommended_next_step"
+  ],
+  "properties": {
+    "primary_output": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Main user-facing result from the worker node."
+    },
+    "notes": {
+      "type": "array",
+      "description": "Short supporting notes for the finalizer.",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "issues_found": {
+      "type": "array",
+      "description": "Detected issues, contradictions, or limitations.",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "recommended_next_step": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Short suggested next action for the author."
+    }
+  }
+}

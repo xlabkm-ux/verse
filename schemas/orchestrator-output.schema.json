@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Verse Orchestrator Output",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "task_type",
+    "goal",
+    "constraints",
+    "requires_project_context"
+  ],
+  "properties": {
+    "task_type": {
+      "type": "string",
+      "enum": ["generate", "edit", "check_context"],
+      "description": "Normalized route selected by the orchestrator."
+    },
+    "goal": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Short normalized statement of the user's goal."
+    },
+    "genre": {
+      "type": ["string", "null"],
+      "description": "Optional genre extracted from the request."
+    },
+    "tone": {
+      "type": ["string", "null"],
+      "description": "Optional tone extracted from the request."
+    },
+    "constraints": {
+      "type": "array",
+      "description": "Explicit user constraints only.",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "requires_project_context": {
+      "type": "boolean",
+      "description": "Whether the request depends on project canon or uploaded files."
+    }
+  }
+}
